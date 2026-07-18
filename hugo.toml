@@ -2,3 +2,36 @@ baseURL = 'https://example.org/'
 locale = 'en-us'
 title = 'Nik Bilous'
 theme = 'hextra'
+
+# Menu
+[menu]
+  [[menu.main]]
+    name = "Blog"
+    pageRef = "/blog"
+    weight = 1
+  [[menu.main]]
+    name = "Search"
+    weight = 2
+    [menu.main.params]
+      type = "search"
+
+[params]
+  # Navbar
+  [params.navbar]
+    displayTitle = true
+    displayLogo = false
+
+  # Blog settings
+  [params.blog]
+    [params.blog.list]
+      displayTags = true
+      sortBy = "date"
+      sortOrder = "desc"
+      pagerSize = 10
+    [params.blog.article]
+      displayPagination = true
+
+  # Theme
+  [params.theme]
+    default = "system"
+    displayToggle = true
